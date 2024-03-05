@@ -1,0 +1,105 @@
+.filter-price{
+  margin-top: 20px;
+  max-width: 292px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.price-text{
+  color: #333;
+  font-size: clamp(0.8rem, 1vw  ,1.2rem);
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+
+.filter-input-block{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+
+}
+.minimum-container{
+  display: flex;
+  align-items: center;
+}
+
+.minimum-container:after{
+  color: #999;
+  content: "-";
+  font-size: 0.6rem;
+  line-height: 2px;
+  margin: 0 5px;
+}
+
+.minimum-price,
+.maximum-price{
+  background-color: white;
+  height: auto;
+  font-size: clamp(0.4rem, 1.2vw , 0.8rem);
+  border-color: #777;
+  border-radius: 5px;
+  border-width: 1px;
+  margin: 0;
+  padding: 3px 5px;
+}
+
+.maximum-price{
+  max-width: 80px;
+  min-width: 38px;
+  width: 100%;
+}
+.minimum-price{
+  max-width: 80px;
+  min-width: 38px;
+  width: 100%;
+
+}
+
+
+.minimum-price:focus,
+.maximum-price:focus{
+  box-shadow: 0 0 0 2.5px blue;
+}
+
+.apply-filter-button{
+  margin-left: 0.3rem;
+  max-height: 18px;
+  max-width: 18px;
+  border-radius: 100%;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.apply-filter-button.disabled{
+  background-color: rgb(209, 209, 209);
+  cursor: default;
+}
+
+.apply-filter-button.active{
+  background-color: blue;
+  cursor: pointer;
+
+}
+
+.input-error{
+  font-size: clamp(0.4rem, 1.2vw , 0.8rem);
+  margin-top: 5px;
+  border-radius: 8px;
+  padding: 2px 5px;
+  background-color: rgb(250, 227, 150);
+  color: black;
+}
+
+@media screen and (min-width: 768px) {
+
+  .apply-filter-button{
+    max-height: 24px;
+    max-width: 24px;
+
+  }
+
+}

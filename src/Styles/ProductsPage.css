@@ -1,0 +1,84 @@
+.page-content{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+  color: black;
+  padding-top: 10px;
+  max-width: 1215px;
+  padding-left: 10px;
+  padding-right: 28px;
+}
+
+.left-content{
+  display: flex;
+  flex-direction: column;
+  max-width: 120px;
+}
+
+.resume-content{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.resume-title{
+  color: #333;
+  font-size: clamp(0.8rem,  3vw , 1.6rem);
+  font-weight: 600;
+  line-height: 30px;
+  text-align: start;
+}
+
+.resume-results{
+  color: #333;
+  font-size: clamp(0.8rem, 1vw  ,1.2rem);
+  font-weight: 300;
+  line-height: 1.29;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-inline-start: 0;
+}
+
+
+
+
+.right-content{
+  max-width: 885px;
+  width: 100%;
+}
+
+.content-sort{
+  background-color: transparent;
+  position: relative;
+  display: flex;
+  margin-top: 4px;
+  margin-bottom: 12spx;
+  justify-content: flex-end;
+  font-size: clamp(0.7rem, 1.5vw ,1rem);
+
+}
+
+.products-block{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  height: auto;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  .page-content{
+    gap: 42px;
+    padding-top: 32px;
+  }
+
+  .left-content{
+    max-width: 292px;
+  }
+  .content-sort{
+    margin-bottom: 24px;
+  }
+}
