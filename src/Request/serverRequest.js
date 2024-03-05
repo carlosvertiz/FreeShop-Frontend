@@ -1,5 +1,8 @@
+
+const root_url = "https://freeshop-backend-production.up.railway.app"
+
 export async function requestData({category, id, minPrice, maxPrice, sortColumn, sort = "DESC"}){
-  let url = "http://localhost:1234/products/"
+  let url = root_url + "/products/"
   if (id){
     url += `${id}`
   }
@@ -13,15 +16,15 @@ export async function requestData({category, id, minPrice, maxPrice, sortColumn,
 }
 
 export async function requestCategories(){
-  return fetch('http://localhost:1234/products/categories')
+  return fetch( root_url+ '/products/categories' )
 }
 
 export async function requestProduct({id}){
-  return fetch(`http://localhost:1234/products/${id}`)
+  return fetch( root_url+ `/products/${id}` )
 
 }
 
 export async function searchProduct({search}){
-  return fetch(`http://localhost:1234/products/search/${search}`)
+  return fetch( root_url + `/products/search/${search}`)
 }
 
