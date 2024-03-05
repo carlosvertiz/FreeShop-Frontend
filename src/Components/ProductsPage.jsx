@@ -4,10 +4,10 @@ import { MenuFilter } from './MenuFilter.jsx'
 import { InputPriceFilter } from './InputPriceFilter.jsx'
 import { EmptyMessage } from './EmptyMessage.jsx'
 import { ProductsPageHook } from '../Hooks/ProductsPageHook.jsx'
-ProductsPageHook
+import { LoadingBlock } from './LoadingBlock.jsx'
 
 export function ProductsPage(){
-  const {products, filters} = ProductsPageHook()
+  const {products, filters, loading} = ProductsPageHook()
   
   return (
     <>
@@ -21,14 +21,19 @@ export function ProductsPage(){
         </aside>    
 
         <main className='right-content'>
-          { (products.length > 0)?
+          { !loading?
             (
             <>
               <div className='content-sort'>
                 <span className='sort-text'>Ordenado por</span>
                 <MenuFilter></MenuFilter>
               </div>
-
+              { (products.length == 0)?
+              (
+                <EmptyMessage></EmptyMessage>
+              )
+              :
+              (
               <div className='products-block'>
                 {products && products.map(product => (
                   <ProductContainer
@@ -42,11 +47,13 @@ export function ProductsPage(){
                   />
                 ))}
               </div>
+              )
+              }
             </>
             )
            :
            (
-             <EmptyMessage></EmptyMessage>
+            <LoadingBlock></LoadingBlock>
            )
 
           }

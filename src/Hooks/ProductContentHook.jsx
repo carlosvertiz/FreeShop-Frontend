@@ -8,11 +8,15 @@ export function ProductContentHook(){
   const productId = useParams().id
   const [quantity, setquantity] = useState(1)
   const [showConfetti, setShowConfetti] = useState(false);
-
+  const [loading, setLoading] = useState(false)
   useEffect(()=>{
+    setLoading(true)
     requestProduct({id:productId})
     .then( response => response.json())
-    .then( data => setProduct(data[0]))
+    .then( data => {
+      setProduct(data[0])
+      setLoading(false)
+      })
   }, [productId])
   
   
@@ -30,5 +34,5 @@ export function ProductContentHook(){
       setShowConfetti(false);
     }, 5000)
   }
-  return {product, showConfetti, defineQuantity, addToCart, buyProduct}
+  return {product, loading, showConfetti, defineQuantity, addToCart, buyProduct}
 }

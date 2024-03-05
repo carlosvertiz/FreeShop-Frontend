@@ -1,0 +1,17 @@
+.loading-block{
+  background-color: white;
+  border-radius: 20px;
+  max-width: 900px;
+  margin: 50px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgb(202, 202, 202);
+}
+
+.loading-text{
+  
+  padding: 50px 20px;
+  font-weight: 600;
+  font-size: clamp(0.8rem, 1.1vw,1.2rem);
+}
