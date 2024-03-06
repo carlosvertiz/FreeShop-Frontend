@@ -31,7 +31,7 @@
   content: "-";
   font-size: 0.6rem;
   line-height: 2px;
-  margin: 0 5px;
+  margin: 0 4px;
 }
 
 .minimum-price,
@@ -48,12 +48,12 @@
 
 .maximum-price{
   max-width: 80px;
-  min-width: 38px;
+  min-width: 35px;
   width: 100%;
 }
 .minimum-price{
   max-width: 80px;
-  min-width: 38px;
+  min-width: 35px;
   width: 100%;
 
 }
